@@ -34,6 +34,8 @@ In our design, we used the [SSITH P2](https://github.com/CTSRD-CHERI/Flute/tree/
 
 The Vivado project from the [BESSPIN-GFE](https://github.com/CTSRD-CHERI/BESSPIN-GFE) extends the P2/P3 system with all peripherals required to run a FreeBSD/CheriBSD system. We planned to use that design for learning purposes and as a reference. The first issue we encountered was the need of TEMAC license to use the Ethernet block. Ethernet block is useful because it allows to transfer files to/from the CheriBSD (as described at [this link](https://github.com/CTSRD-CHERI/cheripedia/wiki/HOWTO%3A-Run-CheriBSD-and-Toooba-on-VCU118#transferring-files-to-bsd)) but we decided to use the second UART interface for that purpose instead.
 
+Additionally, in comparison with the BESSPIN-GFE design, our design lacks SPI blocks, IIC, DMA, and we use DDR3 controller instead of DDR4. We are not 100% sure the system is fully stable because of these changes, however it boots correctly, runs a "hello world" program and successfully stops stack buffer overflow program from [cheri-exercises](https://github.com/CTSRD-CHERI/cheri-exercises/tree/master/src/exercises/buffer-overflow-stack) with "In-address space security exception" message.
+
 # Block design
 
 ![](.images/../images/p2_ddr.png)
