@@ -1,7 +1,7 @@
 # CheriBSD-on-minimal-hardware
 Files and instructions for running CheriBSD using Flute processor implemented on ZC706 board. 
-
-# Contents
+- [CheriBSD-on-minimal-hardware](#cheribsd-on-minimal-hardware)
+- [Contents](#contents)
 - [Purpose](#purpose)
 - [Background and characteristics of the minimal hardware design](#background-and-characteristics-of-the-minimal-hardware-design)
 - [Block design](#block-design)
@@ -21,6 +21,7 @@ Files and instructions for running CheriBSD using Flute processor implemented on
   - [bbl and kernels](#bbl-and-kernels)
   - [bit and ltx](#bit-and-ltx)
   - [bootrom.coe](#bootromcoe)
+- [Additional notes](#additional-notes)
 
 
 # Purpose
@@ -31,7 +32,7 @@ We wanted to run CheriBSD on a ZC706, possibly with the minimal hardware impleme
 # Background and characteristics of the minimal hardware design
 In our design, we used the [SSITH P2](https://github.com/CTSRD-CHERI/Flute/tree/CHERI/src_SSITH_P2) wrapper around the CTSRD-CHERI-Flute processor, the P2 wrapper provides Jtag interface and 2 AXI bus interfaces (1 strictly for instructions, and 1 for other peripherals), making the system convenient to use and extend in Vivado block design. 
 
-The Vivado project from the [BESSPIN-GFE](https://github.com/CTSRD-CHERI/BESSPIN-GFE) extends the P2/P3 system with all peripherals required to run a FreeBSD/CheriBSD system. We planned to use that design for learning purposes and as a reference. The first issue we encountered was the need of TEMAC license to use the Ethernet interface. Ethernet interface is useful because it allows to transfer files to/from the CheriBSD (as described at [this link](https://github.com/CTSRD-CHERI/cheripedia/wiki/HOWTO%3A-Run-CheriBSD-and-Toooba-on-VCU118#transferring-files-to-bsd)) but we decided to use the second UART interface for that purpose instead.
+The Vivado project from the [BESSPIN-GFE](https://github.com/CTSRD-CHERI/BESSPIN-GFE) extends the P2/P3 system with all peripherals required to run a FreeBSD/CheriBSD system. We planned to use that design for learning purposes and as a reference. The first issue we encountered was the need of TEMAC license to use the Ethernet block. Ethernet block is useful because it allows to transfer files to/from the CheriBSD (as described at [this link](https://github.com/CTSRD-CHERI/cheripedia/wiki/HOWTO%3A-Run-CheriBSD-and-Toooba-on-VCU118#transferring-files-to-bsd)) but we decided to use the second UART interface for that purpose instead.
 
 # Block design
 
@@ -250,3 +251,6 @@ make
 
 The ZC706 branch has a modified [devicetree.dts](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/devicetree.dts), which has removed Ethernet, DMA, and introduced 2nd UART. Additionally, it sets 50MHz clock and disables PCI in the [Makefile](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/Makefile)
 
+
+# Additional notes
+VCU118 board setup involves running the [vcu118-run.py](https://github.com/michalmonday/cheribuild/blob/master/vcu118-run.py) script. Setup steps from this guide are mimicking actions of that script. Possibly, it would be better to modify that script, provide `--board` argument and use it instead of manually invoking Vivado, OpenOCD, GDB and serial terminals.
