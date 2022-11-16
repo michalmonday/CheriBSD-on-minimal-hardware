@@ -1,7 +1,5 @@
 # CheriBSD-on-minimal-hardware
 Files and instructions for running CheriBSD using Flute processor implemented on ZC706 board. 
-- [CheriBSD-on-minimal-hardware](#cheribsd-on-minimal-hardware)
-- [Contents](#contents)
 - [Purpose](#purpose)
 - [Background and characteristics of the minimal hardware design](#background-and-characteristics-of-the-minimal-hardware-design)
 - [Block design](#block-design)
