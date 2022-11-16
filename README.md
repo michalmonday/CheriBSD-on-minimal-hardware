@@ -37,7 +37,7 @@ The Vivado project from the [BESSPIN-GFE](https://github.com/CTSRD-CHERI/BESSPIN
 
 ![](.images/../images/p2_ddr.png)
 
-See high resulution [PDF here](./images/p2_ddr.pdf).
+See high resulution [PDF here](./images/p2_ddr3.pdf). Constraints that were used are available [here](./files/vivado_2022_1_project/p2_constraints.xdc).
 
 # Prerequisites
 * ZC706 board
@@ -248,5 +248,5 @@ make
 # The bootrom.coe should be overwritten.
 ```
 
-The ZC706 branch has a modified [devicetree.dts](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/devicetree.dts), which has removed Ethernet, DMA, and introduced 2nd UART. 
+The ZC706 branch has a modified [devicetree.dts](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/devicetree.dts), which has removed Ethernet, DMA, and introduced 2nd UART. Additionally, it sets 50MHz clock and disables PCI in the [Makefile](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/Makefile)
 
