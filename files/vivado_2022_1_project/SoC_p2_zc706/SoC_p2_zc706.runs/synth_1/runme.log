@@ -1,0 +1,691 @@
+
+*** Running vivado
+    with args -log p2_ddr3_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source p2_ddr3_wrapper.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source p2_ddr3_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/michal/BESSPIN-GFE_2/jtag'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/michal/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top p2_ddr3_wrapper -part xc7z045ffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17637
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/michal/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 169 ; free virtual = 6484
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_wrapper' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/hdl/p2_ddr3_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:12]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_axi_bram_ctrl_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_axi_bram_ctrl_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_bram_ctrl_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'bram_we_a' of module 'p2_ddr3_axi_bram_ctrl_0_0' is unconnected for instance 'axi_bram_ctrl_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:347]
+WARNING: [Synth 8-7071] port 'bram_wrdata_a' of module 'p2_ddr3_axi_bram_ctrl_0_0' is unconnected for instance 'axi_bram_ctrl_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:347]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0' of module 'p2_ddr3_axi_bram_ctrl_0_0' has 40 connections declared, but only 38 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:347]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_axi_bram_ctrl_0_bram_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_bram_ctrl_0_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_axi_bram_ctrl_0_bram_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_bram_ctrl_0_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'p2_ddr3_axi_bram_ctrl_0_bram_0' is unconnected for instance 'axi_bram_ctrl_0_bram' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:386]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0_bram' of module 'p2_ddr3_axi_bram_ctrl_0_bram_0' has 6 connections declared, but only 5 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:386]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_axi_clock_converter_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_clock_converter_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_axi_clock_converter_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_clock_converter_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'p2_ddr3_axi_clock_converter_0_0' is unconnected for instance 'axi_clock_converter_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:392]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'p2_ddr3_axi_clock_converter_0_0' is unconnected for instance 'axi_clock_converter_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:392]
+WARNING: [Synth 8-7023] instance 'axi_clock_converter_0' of module 'p2_ddr3_axi_clock_converter_0_0' has 74 connections declared, but only 72 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:392]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_axi_uart16550_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_uart16550_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_axi_uart16550_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_uart16550_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'baudoutn' of module 'p2_ddr3_axi_uart16550_0_0' is unconnected for instance 'axi_uart16550_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+WARNING: [Synth 8-7071] port 'ddis' of module 'p2_ddr3_axi_uart16550_0_0' is unconnected for instance 'axi_uart16550_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+WARNING: [Synth 8-7071] port 'out1n' of module 'p2_ddr3_axi_uart16550_0_0' is unconnected for instance 'axi_uart16550_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+WARNING: [Synth 8-7071] port 'out2n' of module 'p2_ddr3_axi_uart16550_0_0' is unconnected for instance 'axi_uart16550_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+WARNING: [Synth 8-7071] port 'rtsn' of module 'p2_ddr3_axi_uart16550_0_0' is unconnected for instance 'axi_uart16550_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+WARNING: [Synth 8-7071] port 'rxrdyn' of module 'p2_ddr3_axi_uart16550_0_0' is unconnected for instance 'axi_uart16550_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+WARNING: [Synth 8-7071] port 'txrdyn' of module 'p2_ddr3_axi_uart16550_0_0' is unconnected for instance 'axi_uart16550_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+WARNING: [Synth 8-7023] instance 'axi_uart16550_0' of module 'p2_ddr3_axi_uart16550_0_0' has 35 connections declared, but only 28 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_axi_uart16550_1_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_uart16550_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_axi_uart16550_1_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_axi_uart16550_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'baudoutn' of module 'p2_ddr3_axi_uart16550_1_0' is unconnected for instance 'axi_uart16550_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+WARNING: [Synth 8-7071] port 'ddis' of module 'p2_ddr3_axi_uart16550_1_0' is unconnected for instance 'axi_uart16550_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+WARNING: [Synth 8-7071] port 'out1n' of module 'p2_ddr3_axi_uart16550_1_0' is unconnected for instance 'axi_uart16550_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+WARNING: [Synth 8-7071] port 'out2n' of module 'p2_ddr3_axi_uart16550_1_0' is unconnected for instance 'axi_uart16550_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+WARNING: [Synth 8-7071] port 'rtsn' of module 'p2_ddr3_axi_uart16550_1_0' is unconnected for instance 'axi_uart16550_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+WARNING: [Synth 8-7071] port 'rxrdyn' of module 'p2_ddr3_axi_uart16550_1_0' is unconnected for instance 'axi_uart16550_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+WARNING: [Synth 8-7071] port 'txrdyn' of module 'p2_ddr3_axi_uart16550_1_0' is unconnected for instance 'axi_uart16550_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+WARNING: [Synth 8-7023] instance 'axi_uart16550_1' of module 'p2_ddr3_axi_uart16550_1_0' has 35 connections declared, but only 28 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_xlconcat_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_xlconcat_0_0/synth/p2_ddr3_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_xlconcat_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_xlconcat_0_0/synth/p2_ddr3_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_mig_7series_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_mig_7series_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_mig_7series_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_mig_7series_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'ui_clk_sync_rst' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_1' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_2' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_3' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_4' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'mmcm_locked' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'app_sr_active' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'app_ref_ack' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'app_zq_ack' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'init_calib_complete' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7071] port 'device_temp' of module 'p2_ddr3_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+WARNING: [Synth 8-7023] instance 'mig_7series_0' of module 'p2_ddr3_mig_7series_0_0' has 69 connections declared, but only 56 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:541]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_mkP2_Core_1_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_mkP2_Core_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_mkP2_Core_1_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_mkP2_Core_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'CLK_jtag_tclk_out' of module 'p2_ddr3_mkP2_Core_1_0' is unconnected for instance 'mkP2_Core_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:598]
+WARNING: [Synth 8-7071] port 'CLK_GATE_jtag_tclk_out' of module 'p2_ddr3_mkP2_Core_1_0' is unconnected for instance 'mkP2_Core_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:598]
+WARNING: [Synth 8-7023] instance 'mkP2_Core_1' of module 'p2_ddr3_mkP2_Core_1_0' has 87 connections declared, but only 85 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:598]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_rst_p2_ddr3_50M_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_rst_p2_ddr3_50M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_rst_p2_ddr3_50M_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_rst_p2_ddr3_50M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'p2_ddr3_rst_p2_ddr3_50M_0' is unconnected for instance 'rst_p2_ddr3_50M' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:684]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'p2_ddr3_rst_p2_ddr3_50M_0' is unconnected for instance 'rst_p2_ddr3_50M' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:684]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'p2_ddr3_rst_p2_ddr3_50M_0' is unconnected for instance 'rst_p2_ddr3_50M' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:684]
+WARNING: [Synth 8-7023] instance 'rst_p2_ddr3_50M' of module 'p2_ddr3_rst_p2_ddr3_50M_0' has 10 connections declared, but only 7 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:684]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_smartconnect_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_smartconnect_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_smartconnect_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_smartconnect_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'M00_AXI_awqos' of module 'p2_ddr3_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:692]
+WARNING: [Synth 8-7071] port 'M00_AXI_arqos' of module 'p2_ddr3_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:692]
+WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'p2_ddr3_smartconnect_0_0' has 180 connections declared, but only 178 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:692]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:871]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_system_ila_0_1' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_system_ila_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_system_ila_0_1' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_system_ila_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_xilinx_jtag_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_xilinx_jtag_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_xilinx_jtag_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/.Xil/Vivado-17586-ubuntu/realtime/p2_ddr3_xilinx_jtag_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'reset' of module 'p2_ddr3_xilinx_jtag_0_0' is unconnected for instance 'xilinx_jtag_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:992]
+WARNING: [Synth 8-7071] port 'sel1' of module 'p2_ddr3_xilinx_jtag_0_0' is unconnected for instance 'xilinx_jtag_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:992]
+WARNING: [Synth 8-7071] port 'sel2' of module 'p2_ddr3_xilinx_jtag_0_0' is unconnected for instance 'xilinx_jtag_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:992]
+WARNING: [Synth 8-7023] instance 'xilinx_jtag_0' of module 'p2_ddr3_xilinx_jtag_0_0' has 9 connections declared, but only 6 given [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:992]
+INFO: [Synth 8-6157] synthesizing module 'p2_ddr3_xlconstant_0_0' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_xlconstant_0_0/synth/p2_ddr3_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_xlconstant_0_0' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_xlconstant_0_0/synth/p2_ddr3_xlconstant_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'p2_ddr3_wrapper' (0#1) [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/hdl/p2_ddr3_wrapper.v:12]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_uart16550_0'. This will prevent further optimization [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:465]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:871]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'external_interrupts_0'. This will prevent further optimization [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:523]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_uart16550_1'. This will prevent further optimization [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:494]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mkP2_Core_1'. This will prevent further optimization [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:598]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'smartconnect_0'. This will prevent further optimization [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/synth/p2_ddr3.v:692]
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In105[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In106[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In107[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In108[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In109[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In110[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In111[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In112[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In113[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In114[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In115[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1325 ; free virtual = 7595
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1336 ; free virtual = 7606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1336 ; free virtual = 7606
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1332 ; free virtual = 7601
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc] for cell 'p2_ddr3_i/mig_7series_0'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc] for cell 'p2_ddr3_i/mig_7series_0'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_bram_ctrl_0_0/p2_ddr3_axi_bram_ctrl_0_0/p2_ddr3_axi_bram_ctrl_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_bram_ctrl_0_0/p2_ddr3_axi_bram_ctrl_0_0/p2_ddr3_axi_bram_ctrl_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_bram_ctrl_0'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_bram_ctrl_0_bram_0/p2_ddr3_axi_bram_ctrl_0_bram_0/p2_ddr3_axi_bram_ctrl_0_bram_0_in_context.xdc] for cell 'p2_ddr3_i/axi_bram_ctrl_0_bram'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_bram_ctrl_0_bram_0/p2_ddr3_axi_bram_ctrl_0_bram_0/p2_ddr3_axi_bram_ctrl_0_bram_0_in_context.xdc] for cell 'p2_ddr3_i/axi_bram_ctrl_0_bram'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_clock_converter_0_0/p2_ddr3_axi_clock_converter_0_0/p2_ddr3_axi_clock_converter_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_clock_converter_0'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_clock_converter_0_0/p2_ddr3_axi_clock_converter_0_0/p2_ddr3_axi_clock_converter_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_clock_converter_0'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_uart16550_0_0/p2_ddr3_axi_uart16550_0_0/p2_ddr3_axi_uart16550_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_uart16550_0'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_uart16550_0_0/p2_ddr3_axi_uart16550_0_0/p2_ddr3_axi_uart16550_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_uart16550_0'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_smartconnect_0_0/p2_ddr3_smartconnect_0_0/p2_ddr3_smartconnect_0_0_in_context.xdc] for cell 'p2_ddr3_i/smartconnect_0'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_smartconnect_0_0/p2_ddr3_smartconnect_0_0/p2_ddr3_smartconnect_0_0_in_context.xdc] for cell 'p2_ddr3_i/smartconnect_0'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_xilinx_jtag_0_0/p2_ddr3_xilinx_jtag_0_0/p2_ddr3_xilinx_jtag_0_0_in_context.xdc] for cell 'p2_ddr3_i/xilinx_jtag_0'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_xilinx_jtag_0_0/p2_ddr3_xilinx_jtag_0_0/p2_ddr3_xilinx_jtag_0_0_in_context.xdc] for cell 'p2_ddr3_i/xilinx_jtag_0'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mkP2_Core_1_0/p2_ddr3_mkP2_Core_1_0/p2_ddr3_mkP2_Core_1_0_in_context.xdc] for cell 'p2_ddr3_i/mkP2_Core_1'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mkP2_Core_1_0/p2_ddr3_mkP2_Core_1_0/p2_ddr3_mkP2_Core_1_0_in_context.xdc] for cell 'p2_ddr3_i/mkP2_Core_1'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_system_ila_0_1/p2_ddr3_system_ila_0_1/p2_ddr3_system_ila_0_1_in_context.xdc] for cell 'p2_ddr3_i/system_ila_0'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_system_ila_0_1/p2_ddr3_system_ila_0_1/p2_ddr3_system_ila_0_1_in_context.xdc] for cell 'p2_ddr3_i/system_ila_0'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_rst_p2_ddr3_50M_0/p2_ddr3_rst_p2_ddr3_50M_0/p2_ddr3_rst_p2_ddr3_50M_0_in_context.xdc] for cell 'p2_ddr3_i/rst_p2_ddr3_50M'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_rst_p2_ddr3_50M_0/p2_ddr3_rst_p2_ddr3_50M_0/p2_ddr3_rst_p2_ddr3_50M_0_in_context.xdc] for cell 'p2_ddr3_i/rst_p2_ddr3_50M'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_uart16550_1_0/p2_ddr3_axi_uart16550_1_0/p2_ddr3_axi_uart16550_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_uart16550_1'
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_axi_uart16550_1_0/p2_ddr3_axi_uart16550_1_0/p2_ddr3_axi_uart16550_0_0_in_context.xdc] for cell 'p2_ddr3_i/axi_uart16550_1'
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SYS_CLK_0_clk_p'. [/home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'SYS_CLK_0_clk_n'. [/home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'SYS_CLK_0_clk_p'. [/home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc:8]
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/p2_ddr3_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/p2_ddr3_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/p2_ddr3_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1224 ; free virtual = 7496
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1224 ; free virtual = 7496
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1310 ; free virtual = 7583
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1310 ; free virtual = 7583
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[10]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[10]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[11]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[11]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[12]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[12]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[13]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[13]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[8]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[8]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_addr[9]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_addr[9]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ba[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ba[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ba[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ba[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ba[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ba[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_cas_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_cas_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ck_n[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ck_n[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ck_p[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ck_p[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_cke[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_cke[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_cs_n[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_cs_n[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dm[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dm[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[10]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[10]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[11]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[11]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[12]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[12]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[13]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[13]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[14]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[14]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[15]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[15]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[16]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[16]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[17]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[17]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[18]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[18]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[19]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[19]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[20]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[20]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[21]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[21]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[22]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[22]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[23]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[23]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[24]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[24]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[25]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[25]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[26]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[26]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[27]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[27]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[28]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[28]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[29]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[29]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[30]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[30]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[31]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[31]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[32]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[32]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[33]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[33]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[34]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[34]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[35]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[35]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[36]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[36]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[37]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[37]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[38]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[38]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[39]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[39]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[40]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[40]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[41]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[41]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[42]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[42]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[43]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[43]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[44]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 144).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[44]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 145).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[45]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 146).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[45]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 147).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[46]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 148).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[46]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 149).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[47]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 150).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[47]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 151).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[48]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 152).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[48]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 153).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[49]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 154).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[49]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 155).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 156).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 157).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[50]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 158).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[50]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 159).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[51]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 160).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[51]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 161).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[52]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 162).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[52]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 163).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[53]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 164).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[53]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 165).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[54]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 166).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[54]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 167).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[55]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 168).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[55]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 169).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[56]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 170).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[56]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 171).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[57]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 172).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[57]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 173).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[58]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 174).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[58]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 175).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[59]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 176).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[59]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 177).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 178).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 179).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[60]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 180).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[60]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 181).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[61]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 182).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[61]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 183).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[62]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 184).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[62]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 185).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[63]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 186).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[63]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 187).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 188).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 189).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 190).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 191).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[8]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 192).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[8]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 193).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dq[9]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 194).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dq[9]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 195).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 196).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 197).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 198).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 199).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 200).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 201).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 202).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 203).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 204).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 205).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 206).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 207).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 208).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 209).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 210).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_n[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 211).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 212).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 213).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 214).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[1]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 215).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 216).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[2]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 217).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 218).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[3]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 219).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 220).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[4]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 221).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 222).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[5]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 223).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 224).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[6]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 225).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 226).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_dqs_p[7]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 227).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_odt[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 228).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_odt[0]. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 229).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_ras_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 230).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_ras_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 231).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_reset_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 232).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_reset_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 233).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_sdram_we_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 234).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_sdram_we_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 235).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_diff_clock_clk_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 236).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_diff_clock_clk_n. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 237).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_diff_clock_clk_p. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 238).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_diff_clock_clk_p. (constraint file  /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_in_context.xdc, line 239).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/mig_7series_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/axi_bram_ctrl_0_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/axi_clock_converter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/axi_uart16550_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/smartconnect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/xilinx_jtag_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/mkP2_Core_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/system_ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/rst_p2_ddr3_50M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/external_interrupts_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/axi_uart16550_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for p2_ddr3_i/xlconstant_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1311 ; free virtual = 7583
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1312 ; free virtual = 7586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1297 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1179 ; free virtual = 7457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1179 ; free virtual = 7457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1176 ; free virtual = 7455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1177 ; free virtual = 7455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1177 ; free virtual = 7455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1177 ; free virtual = 7455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1177 ; free virtual = 7455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1177 ; free virtual = 7455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1177 ; free virtual = 7455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |p2_ddr3_axi_bram_ctrl_0_0       |         1|
+|2     |p2_ddr3_axi_bram_ctrl_0_bram_0  |         1|
+|3     |p2_ddr3_axi_clock_converter_0_0 |         1|
+|4     |p2_ddr3_axi_uart16550_0_0       |         1|
+|5     |p2_ddr3_axi_uart16550_1_0       |         1|
+|6     |p2_ddr3_mig_7series_0_0         |         1|
+|7     |p2_ddr3_mkP2_Core_1_0           |         1|
+|8     |p2_ddr3_rst_p2_ddr3_50M_0       |         1|
+|9     |p2_ddr3_smartconnect_0_0        |         1|
+|10    |p2_ddr3_system_ila_0_1          |         1|
+|11    |p2_ddr3_xilinx_jtag_0_0         |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |p2_ddr3_axi_bram_ctrl_0       |     1|
+|2     |p2_ddr3_axi_bram_ctrl_0_bram  |     1|
+|3     |p2_ddr3_axi_clock_converter_0 |     1|
+|4     |p2_ddr3_axi_uart16550_0       |     1|
+|5     |p2_ddr3_axi_uart16550_1       |     1|
+|6     |p2_ddr3_mig_7series_0         |     1|
+|7     |p2_ddr3_mkP2_Core_1           |     1|
+|8     |p2_ddr3_rst_p2_ddr3_50M       |     1|
+|9     |p2_ddr3_smartconnect_0        |     1|
+|10    |p2_ddr3_system_ila_0          |     1|
+|11    |p2_ddr3_xilinx_jtag_0         |     1|
+|12    |IBUF                          |     5|
+|13    |OBUF                          |     4|
++------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1177 ; free virtual = 7455
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1228 ; free virtual = 7507
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1228 ; free virtual = 7507
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1323 ; free virtual = 7601
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1259 ; free virtual = 7537
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 89671259
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 159 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2803.410 ; gain = 0.000 ; free physical = 1458 ; free virtual = 7736
+INFO: [Common 17-1381] The checkpoint '/home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/synth_1/p2_ddr3_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file p2_ddr3_wrapper_utilization_synth.rpt -pb p2_ddr3_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 14 05:04:47 2022...

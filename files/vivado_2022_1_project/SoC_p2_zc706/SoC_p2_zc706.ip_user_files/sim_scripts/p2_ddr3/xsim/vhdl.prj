@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/p2_ddr3/ip/p2_ddr3_proc_sys_reset_0_0/sim/p2_ddr3_proc_sys_reset_0_0.vhd" \
+"../../../bd/p2_ddr3/ip/p2_ddr3_axi_bram_ctrl_0_0/sim/p2_ddr3_axi_bram_ctrl_0_0.vhd" \
+"../../../bd/p2_ddr3/ip/p2_ddr3_axi_uart16550_0_0/sim/p2_ddr3_axi_uart16550_0_0.vhd" \
+"../../../bd/p2_ddr3/ip/p2_ddr3_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_df65_psr_aclk_0.vhd" \
+
+nosort

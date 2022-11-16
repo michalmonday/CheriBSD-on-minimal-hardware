@@ -1,0 +1,75 @@
+
+# VIVADO (this can be done through Vivado GUI, in such we just need to remember to close the server in hardware manager before connecting with OpenOCD, otherwise it will appear busy)
+export PATH=/home/michal/Xilinx/Vivado/2019.1/bin:$PATH
+vivado -nojournal -notrace -nolog -source vivado_script_zc706.txt -mode batch -tclargs p2.bit p2.ltx
+
+# Finding serial port (connected to 1st UART through ZC706 J58 PMOD header, right side)
+python3 -m pip install pyserial
+python3 -m serial.tools.list_ports -v 
+
+# Serial connection (to view CheriBSD booting output + interact with its command line)
+# Either:
+    screen /dev/ttyUSB_first_uart 115200
+# Or:
+    /usr/bin/python3 -m serial.tools.miniterm /dev/ttyUSB_first_uart 115200 --eol LF
+
+# OpenOCD (ZC706 is connected through 2 USB cables, Jtag and USB-UART, I guess only the Jtag one is really needed)
+/usr/local/bin/openocd -f openocd_script_zc706.cfg
+
+# GDB (3333 port corresponds to the port outputted after running OpenOCD)
+~/ecats-phase3-evaluation/riscv64-unknown-elf-gdb /home/michal/cheri/output/sdk/bbl-gfe/riscv64-purecap/bbl \
+	-ex 'target extended-remote :3333' \
+	-ex 'set confirm off'  \
+	-ex 'set pagination off'  \
+	-ex 'set style enabled off'  \
+	-ex 'monitor reset init'  \
+	-ex 'si 5'  \
+	-ex 'set disassemble-next-line on'  \
+	-ex 'symbol-file /home/michal/ecats-phase3-evaluation/kernel-riscv64-purecap.CHERI-GFE-NODEBUG'  \
+	-ex 'load /home/michal/ecats-phase3-evaluation/kernel-riscv64-purecap.CHERI-GFE-NODEBUG'  \
+	-ex 'load /home/michal/cheri/output/sdk/bbl-gfe/riscv64-purecap/bbl' 
+
+# After all files are uploaded through gdb, it will allow to type commands.
+# To start booting GDB we need to type "continue", after using it, the 
+# serial port should output booting messages and after around 10-20 minutes
+# the prompt should appear.
+
+
+##########################################################
+# Sending a program to CheriBSD through serial.
+
+// On CheriBSD:
+cat /dev/cuau1 > program.txt
+
+// On host computer (which is connected to 2nd UART through ZC706 J58 PMOD header, left side):
+uuencode program program > /dev/ttyUSB_second_uart
+
+// And again on CheriBSD:
+Ctrl+c (to end the previous "cat")
+uudecode -o program program.txt
+chmod +x program
+./program
+
+
+##########################################################
+# Sending multiple files and/or whole directories through serial.
+
+// On CheriBSD
+cat /dev/cuau1 > archive.tar.gz
+
+// On host computer (which is connected to 2nd UART through ZC706 J58 PMOD header, left side):
+tar -czf archive.tar.gz file1 dir1/subdir/ file2 dir2/
+uuencode archive.tar.gz archive.tar.gz > /dev/ttyUSB_second_uart
+
+// And again on CheriBSD
+Ctrl+c (to end the previous "cat")
+uudecode -o archive.tar.gz archive.tar.gz.txt
+tar -xf archive.tar.gz -C destination_dir/
+// "chmod +x" any executable files when needed
+
+
+##########################################################
+# Setting BAUD rate from CheriBSD prompt (9600 is default and it's pretty slow)
+stty -f /dev/cuau1.init 115200
+stty -f /dev/ttyu1.init 115200 // not sure if this one is needed (not sure what is the difference between cuau and ttyu)
+

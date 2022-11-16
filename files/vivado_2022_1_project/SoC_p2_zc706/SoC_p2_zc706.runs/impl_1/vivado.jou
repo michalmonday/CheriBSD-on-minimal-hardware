@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Nov 14 05:04:51 2022
+# Process ID: 17800
+# Current directory: /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/impl_1
+# Command line: vivado -log p2_ddr3_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source p2_ddr3_wrapper.tcl -notrace
+# Log file: /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/impl_1/p2_ddr3_wrapper.vdi
+# Journal file: /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.runs/impl_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 3187.197 MHz, CPU Physical cores: 8, Host memory: 17942 MB
+#-----------------------------------------------------------
+source p2_ddr3_wrapper.tcl -notrace

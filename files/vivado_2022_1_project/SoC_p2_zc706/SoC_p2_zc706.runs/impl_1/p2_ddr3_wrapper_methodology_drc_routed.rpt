@@ -1,0 +1,1582 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Mon Nov 14 05:25:31 2022
+| Host         : ubuntu running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_methodology -file p2_ddr3_wrapper_methodology_drc_routed.rpt -pb p2_ddr3_wrapper_methodology_drc_routed.pb -rpx p2_ddr3_wrapper_methodology_drc_routed.rpx
+| Design       : p2_ddr3_wrapper
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 303
++-----------+------------------+---------------------------------------------------+------------+
+| Rule      | Severity         | Description                                       | Violations |
++-----------+------------------+---------------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                       | 208        |
+| LUTAR-1   | Warning          | LUT drives async reset alert                      | 5          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain   | 22         |
+| TIMING-18 | Warning          | Missing input or output delay                     | 2          |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects       | 1          |
+| XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten | 1          |
+| REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF                 | 64         |
++-----------+------------------+---------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_busy/empty_reg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_busy/full_reg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMA_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMB_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMC_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_0_5/RAMD_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMA_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMB_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMC_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_12_17/RAMD_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMA_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMB_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMC_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_18_23/RAMD_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMA_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMB_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMC_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_24_29/RAMD_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMA_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMB_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMC_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_30_35/RAMD_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMA_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMB_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMC_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_36_40/RAMD_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMA_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMB_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMC_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/fifoMem_reg_0_1_6_11/RAMD_D1/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sBEnqPtr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sClrSync/sSyncReg1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sClrSync/sSyncReg2_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sClrSync/sToggleReg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sDeqPtr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sDeqPtr_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sGEnqPtr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sGEnqPtr_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sNotFullReg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sSyncReg1_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_req/sSyncReg1_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dBDeqPtr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dClrSync/sSyncReg1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dClrSync/sSyncReg2_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dClrSync/sToggleReg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#90 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#91 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#92 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#93 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#94 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#98 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#99 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[32]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#100 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[33]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#101 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#102 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#103 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#104 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#105 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#106 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#107 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dDoutReg_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#108 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dEnqPtr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#109 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dEnqPtr_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#110 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dGDeqPtr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#111 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dGDeqPtr_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#112 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dNotEmptyReg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#113 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dSyncReg1_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#114 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/f_dmi_rsp/dSyncReg1_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#115 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#116 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#117 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#118 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#119 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#120 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#121 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#122 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#123 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#124 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#125 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#126 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#127 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#128 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#129 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#130 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#131 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#132 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#133 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#134 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#135 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#136 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#137 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#138 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#139 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#140 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[32]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#141 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[33]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#142 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#143 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#144 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#145 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#146 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#147 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#148 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmi_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#149 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dmistat_busy_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#150 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#151 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#152 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#153 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#154 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#155 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#156 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#157 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#158 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#159 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#160 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#161 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#162 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#163 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#164 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#165 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#166 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#167 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#168 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#169 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#170 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#171 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#172 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#173 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#174 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#175 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[32]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#176 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[33]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#177 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[34]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#178 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[35]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#179 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[36]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#180 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[37]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#181 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[38]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#182 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[39]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#183 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#184 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#185 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#186 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#187 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#188 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#189 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_dr_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#190 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_drmask_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#191 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_drmask_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#192 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_drmask_reg[32]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#193 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_drmask_reg[39]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#194 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_ir_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#195 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_ir_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#196 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_ir_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#197 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_ir_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#198 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_ir_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#199 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_ir_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#200 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#201 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#202 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#203 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#204 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/r_tdo_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#205 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/rst_tck/reset_hold_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#206 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/rst_tck/reset_hold_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#207 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/rst_tck/reset_hold_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#208 Critical Warning
+Non-clocked sequential cell  
+The clock pin p2_ddr3_i/mkP2_Core_1/inst/jtagtap/rst_tck/reset_hold_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ref_dll_lock, with 2 or more inputs, drives asynchronous preset/clear pin(s) p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__7/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__8/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__9/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[0]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[10]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[11]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[1]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[2]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[3]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[4]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[5]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[6]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[7]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[8]/PRE,
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[9]/PRE
+ (the first 15 of 57 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X35Y298 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X34Y299 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X35Y300 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X33Y300 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X30Y300 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X29Y299 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X31Y299 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X30Y303 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X29Y304 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X31Y304 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X136Y336 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X137Y330 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#13 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X137Y337 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#14 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X137Y339 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#15 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X136Y334 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#16 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X136Y338 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#17 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X136Y328 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#18 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X137Y335 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#19 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X136Y332 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#20 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X137Y328 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#21 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X137Y332 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#22 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X136Y330 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on reset relative to clock(s) sys_diff_clock_clk_p
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on ddr3_sdram_reset_n relative to clock(s) sys_diff_clock_clk_p
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '7' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0/user_design/constraints/p2_ddr3_mig_7series_0_0.xdc (Line: 831)
+Related violations: <none>
+
+XDCC-2#1 Warning
+Scoped Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on reset overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
+New Source: /home/michal/Downloads/SoC_p2_zc706/p2_constraints.xdc (Line: 16)
+Previous Source: /home/michal/Downloads/SoC_p2_zc706/SoC_p2_zc706/SoC_p2_zc706.gen/sources_1/bd/p2_ddr3/ip/p2_ddr3_mig_7series_0_0/p2_ddr3_mig_7series_0_0_board.xdc (Line: 3)
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#2 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#3 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#4 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#5 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#6 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#7 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#8 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#9 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#10 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#11 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#12 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#13 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#14 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#15 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#16 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#17 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#18 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#19 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#20 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#21 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#22 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#23 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#24 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#25 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#26 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#27 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#28 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#29 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#30 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#31 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#32 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#33 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#34 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#35 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#36 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#37 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#38 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#39 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#40 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#41 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#42 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#43 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#44 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#45 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#46 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#47 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#48 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#49 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#50 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#51 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#52 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#53 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#54 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#55 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#56 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#57 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#58 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#59 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#60 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#61 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#62 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#63 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#64 Advisory
+connects_SERDES_RST_driver_not_FF  
+p2_ddr3_i/mig_7series_0/u_p2_ddr3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+

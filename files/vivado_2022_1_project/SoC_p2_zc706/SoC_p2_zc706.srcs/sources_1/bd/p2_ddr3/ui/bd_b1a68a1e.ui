@@ -1,0 +1,73 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.385144",
+   "Default View_TopLeft":"-249,-667",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port ddr3_sdram -pg 1 -lvl 8 -x 2550 -y 160 -defaultsOSRD
+preplace port sys_diff_clock -pg 1 -lvl 0 -x -90 -y 680 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -90 -y 560 -defaultsOSRD
+preplace port port-id_UART_0_txd -pg 1 -lvl 8 -x 2550 -y 760 -defaultsOSRD
+preplace port port-id_UART_0_rxd -pg 1 -lvl 0 -x -90 -y 830 -defaultsOSRD
+preplace port port-id_UART_0_cts -pg 1 -lvl 0 -x -90 -y 730 -defaultsOSRD
+preplace port port-id_UART_0_dtr -pg 1 -lvl 8 -x 2550 -y 790 -defaultsOSRD
+preplace port port-id_UART_1_txd -pg 1 -lvl 8 -x 2550 -y 840 -defaultsOSRD
+preplace port port-id_UART_1_dtr -pg 1 -lvl 8 -x 2550 -y 910 -defaultsOSRD
+preplace port port-id_UART_1_rxd -pg 1 -lvl 0 -x -90 -y 1010 -defaultsOSRD
+preplace port port-id_UART_1_cts -pg 1 -lvl 0 -x -90 -y 960 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 3 -x 848 -y 580 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -x 110 -y 220 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 2 -x 470 -y 220 -defaultsOSRD
+preplace inst axi_clock_converter_0 -pg 1 -lvl 4 -x 1333 -y 670 -defaultsOSRD
+preplace inst axi_uart16550_0 -pg 1 -lvl 4 -x 1333 -y 860 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 2 -x 470 -y 390 -defaultsOSRD
+preplace inst xilinx_jtag_0 -pg 1 -lvl 3 -x 848 -y 150 -defaultsOSRD
+preplace inst mkP2_Core_1 -pg 1 -lvl 4 -x 1333 -y 300 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 6 -x 2150 -y 160 -defaultsOSRD
+preplace inst rst_p2_ddr3_50M -pg 1 -lvl 4 -x 1333 -y 60 -defaultsOSRD
+preplace inst external_interrupts_0 -pg 1 -lvl 7 -x 2400 -y 480 -defaultsOSRD
+preplace inst axi_uart16550_1 -pg 1 -lvl 5 -x 1870 -y 470 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 6 -x 2150 -y 540 -defaultsOSRD
+preplace netloc Net1 1 0 6 -50 310 260 160 640 300 1050 450 1680 170 N
+preplace netloc UART_0_cts_1 1 0 5 NJ 730 N 730 N 730 1090 560 1590
+preplace netloc UART_0_rxd_1 1 0 5 NJ 830 N 830 N 830 1000 570 1580
+preplace netloc UART_1_cts_1 1 0 6 -60J 970 NJ 970 NJ 970 NJ 970 NJ 970 2020
+preplace netloc UART_1_rxd_1 1 0 6 NJ 1010 NJ 1010 NJ 1010 NJ 1010 NJ 1010 2000
+preplace netloc axi_uart16550_0_dtrn 1 4 4 1710 790 N 790 N 790 N
+preplace netloc axi_uart16550_0_ip2intc_irpt 1 4 3 1690 360 2000 330 N
+preplace netloc axi_uart16550_0_sout 1 4 4 1700 760 N 760 N 760 N
+preplace netloc axi_uart16550_1_dtrn 1 5 3 2040 310 2260J 250 2530J
+preplace netloc axi_uart16550_1_ip2intc_irpt 1 5 2 2030 430 NJ
+preplace netloc axi_uart16550_1_sout 1 5 3 2050 440 2280J 270 2520J
+preplace netloc jtag_clk_1 1 3 1 1070 120n
+preplace netloc jtag_tms_1 1 3 1 1060 160n
+preplace netloc mig_7series_0_ui_clk 1 3 1 990 570n
+preplace netloc mkP2_Core_1_jtag_tdo 1 2 3 650 260 1030J 190 1600
+preplace netloc reset_1 1 0 4 N 560 N 560 620 40 N
+preplace netloc rst_p2_ddr3_50M_interconnect_aresetn 1 2 3 650 740 1080J 550 1610
+preplace netloc rst_p2_ddr3_50M_peripheral_aresetn 1 0 6 -70 140 250 150 630 270 1030 460 1650 230 N
+preplace netloc xilinx_jtag_0_tdi 1 3 1 1080 140n
+preplace netloc xlconcat_0_dout 1 3 5 1090 160 NJ 160 2020J 300 2270J 260 2510
+preplace netloc xlconstant_0_dout 1 6 1 2290 350n
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 N 220
+preplace netloc axi_clock_converter_0_M_AXI 1 2 3 650 470 NJ 470 1600
+preplace netloc mig_7series_0_DDR3 1 3 5 1040J 440 1660J 350 2010 290 2250 160 N
+preplace netloc mkP2_Core_0_master0 1 1 5 280 290 NJ 290 990J 170 1620 90 N
+preplace netloc mkP2_Core_0_master1 1 1 5 270 280 NJ 280 1010J 180 1630 110 N
+preplace netloc smartconnect_0_M00_AXI 1 0 3 -60 300 NJ 300 610
+preplace netloc smartconnect_0_M01_AXI 1 2 2 NJ 380 1020
+preplace netloc smartconnect_0_M02_AXI 1 2 4 NJ 400 1010 410 1640 130 N
+preplace netloc smartconnect_0_M03_AXI 1 2 4 N 420 N 420 1670 150 N
+preplace netloc sys_diff_clock_1 1 0 3 N 680 N 680 640
+levelinfo -pg 1 -90 110 470 848 1333 1870 2150 2400 2550
+pagesize -pg 1 -db -bbox -sgen -240 -270 2690 1310
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"4",
+   "da_bram_cntlr_cnt":"1",
+   "da_clkrst_cnt":"1",
+   "da_mig7_cnt":"1"
+}
