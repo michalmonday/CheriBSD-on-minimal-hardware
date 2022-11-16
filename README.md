@@ -1,4 +1,7 @@
-- [CheriBSD-on-minimal-hardware](#cheribsd-on-minimal-hardware)
+# CheriBSD-on-minimal-hardware
+Files and instructions for running CheriBSD using Flute processor implemented on ZC706 board. 
+
+# Contents
 - [Purpose](#purpose)
 - [Background and characteristics of the minimal hardware design](#background-and-characteristics-of-the-minimal-hardware-design)
 - [Block design](#block-design)
@@ -19,10 +22,6 @@
   - [bit and ltx](#bit-and-ltx)
   - [bootrom.coe](#bootromcoe)
 
-
-
-# CheriBSD-on-minimal-hardware
-Files and instructions for running CheriBSD using Flute processor implemented on ZC706 board. 
 
 # Purpose
 It is relatively straightforward to run CheriBSD on an open-source processor (e.g. Flute, Toooba) when in possession of VCU118 board (as explained on [cheripedia](https://github.com/CTSRD-CHERI/cheripedia/wiki/HOWTO%3A-Run-CheriBSD-and-Toooba-on-VCU118) page). However, VCU118 board is expensive and it is hard to find any information about adapting the hardware design and scripts to a different board.
