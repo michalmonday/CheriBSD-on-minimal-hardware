@@ -8,7 +8,7 @@ Files and instructions for running CheriBSD using Flute processor implemented on
   - [1\. ZC706 switches setting.](#1-zc706-switches-setting)
   - [2\. Connect TTL-to-Converters to the J58 pins on ZC706 board.](#2-connect-ttl-to-converters-to-the-j58-pins-on-zc706-board)
   - [3\. Connect the TTL-to-USB converters to the host computer.](#3-connect-the-ttl-to-usb-converters-to-the-host-computer)
-  - [4\. Clone the repository.](#4-clone-the-repository)
+  - [4\. Clone this repository.](#4-clone-this-repository)
   - [5\. Program the ZC706 board.](#5-program-the-zc706-board)
   - [6\. Install and run OpenOCD (possibly requires GFE-specific version).](#6-install-and-run-openocd-possibly-requires-gfe-specific-version)
   - [7\. Run GDB in a separate terminal.](#7-run-gdb-in-a-separate-terminal)
@@ -36,9 +36,11 @@ Additionally, in comparison with the BESSPIN-GFE design, our design lacks SPI bl
 
 # Block design
 
-![](.images/../images/p2_ddr.png)
+![image missing](./images/p2_ddr.png)  
 
-See high resulution [PDF here](./images/p2_ddr3.pdf). Constraints that were used are available [here](./files/vivado_2022_1_project/p2_constraints.xdc).
+![image missing](./images/address_map.png)  
+
+See high resulution block design [PDF here](./images/p2_ddr3.pdf). Constraints that were used are available [here](./files/vivado_2022_1_project/p2_constraints.xdc).
 
 # Prerequisites
 * ZC706 board
@@ -66,7 +68,9 @@ This exact setting may not be necessary for this guide, but we provide it for re
 
 Images below present the J58 connector connections to both converters, only the 1st converter is necessary to interact with CheriBSD (2nd one can be used to transfer files to/from it). Both images have the same orientation.
 
-<img src="./images/j58.png" height=150/><img src="./images/j58-fritzing.png" heihgt=150/>
+<img src="./images/j58.png" height=150/>
+
+<img src="./images/j58-fritzing.png" heihgt=150/>
 
 > \# Right side (1st UART, command line interaction with CheriBSD)  
 > PMOD1_6 -> RXD of FT232RL converter  
@@ -80,6 +84,7 @@ Images below present the J58 connector connections to both converters, only the 
 
 To find out the port, we can use:
 ```bash
+# python3 -m pip install pyserial
 python3 -m serial.tools.list_ports -v
 ```
 
@@ -87,6 +92,9 @@ Then we can use any serial communication tool like **screen**:
 ```bash 
 screen /dev/ttyUSB_first_uart 115200
 screen /dev/ttyUSB_second_uart 115200
+# to exit screen press Ctrl+a, then "k" (then confirm with "y")
+# to scroll within screen press Ctrl+a, then "Esc"
+# to exit scrolling press "Esc" again
 ```
 
 or **miniterm**:
@@ -95,7 +103,9 @@ python3 -m serial.tools.miniterm /dev/ttyUSB_first_uart 115200 --eol LF
 python3 -m serial.tools.miniterm /dev/ttyUSB_second_uart 115200 --eol LF
 ```
 
-## 4\. Clone the repository.  
+## 4\. Clone this repository.  
+
+It has over 2GB due to large Vivado project files.
 
 ```bash
 # with ssh
@@ -103,6 +113,7 @@ git clone git@github.com:michalmonday/CheriBSD-on-minimal-hardware.git
 # or with http
 git clone https://github.com/michalmonday/CheriBSD-on-minimal-hardware.git
 ```
+
 
 ## 5\. Program the ZC706 board.  
 
@@ -130,7 +141,7 @@ sudo ./install/build-openocd.sh
 ```
 (I'm not sure if running commands preceding this one are necessary)
 
-After running the OpenOCD with `scripts/openocd_zc706`, it should output the following:  
+After running the OpenOCD with `scripts/openocd_zc706.cfg`, it should output the following:  
 
 > Info : Hardware thread awareness created  
 > Info : clock speed 1000 kHz  
@@ -146,7 +157,8 @@ After running the OpenOCD with `scripts/openocd_zc706`, it should output the fol
 
 ## 7\. Run GDB in a separate terminal.
 ```bash
-# GDB (3333 port corresponds to the port outputted after running OpenOCD)
+# 3333 port corresponds to the port outputted after running OpenOCD.
+# In the command below paths are relative, if there's an error then try to use absolute paths.
 ./tools/riscv64-unknown-elf-gdb files/bbl \
 	-ex 'target extended-remote :3333' \
 	-ex 'set confirm off'  \
@@ -241,7 +253,7 @@ Clone [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) and:
 [files/vivado_2022_1_project](./files/vivado_2022_1_project/) directory contains the whole vivado project and associated files/sources needed to recreate bit/ltx files. It most likely requires 2022.1 version of Vivado. It will surely output errors after opening the project due to invalid sources paths, sorry about that but I didn't figure out how to conveniently share Vivado projects including block designs.
 
 ## bootrom.coe
-Clone [my fork of BESSPIN-GFE](https://github.com/michalmonday/BESSPIN-GFE) repository, switch to "ZC706" branch recompile bootrom.coe file (which can be then used in Vivado block design to set contents of bootrom block at 0x70000000 address)
+Clone [my fork of BESSPIN-GFE](https://github.com/michalmonday/BESSPIN-GFE) repository, switch to "ZC706" branch, recompile bootrom.coe file (which can be then used in Vivado block design to set contents of bootrom block at 0x70000000 address)
 ```bash
 git checkout ZC706
 cd bootrom
