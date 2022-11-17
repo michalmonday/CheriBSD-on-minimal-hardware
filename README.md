@@ -6,7 +6,7 @@ Files and instructions for running CheriBSD using Flute processor implemented on
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
   - [1\. ZC706 switches setting.](#1-zc706-switches-setting)
-  - [2\. Connect TTL-to-Converters to the J58 pins on ZC706 board.](#2-connect-ttl-to-converters-to-the-j58-pins-on-zc706-board)
+  - [2\. Connect TTL-to-USB converters to the J58 pins on ZC706 board.](#2-connect-ttl-to-usb-converters-to-the-j58-pins-on-zc706-board)
   - [3\. Connect the TTL-to-USB converters to the host computer.](#3-connect-the-ttl-to-usb-converters-to-the-host-computer)
   - [4\. Clone this repository.](#4-clone-this-repository)
   - [5\. Program the ZC706 board.](#5-program-the-zc706-board)
@@ -64,7 +64,7 @@ SW4 - PL JTAG select switch (Digilent USB-to-JTAG interface selected):
 
 This exact setting may not be necessary for this guide, but we provide it for reference and convenience. More information about these switches is available on [ZC706 User Guide](https://docs.xilinx.com/v/u/en-US/ug954-zc706-eval-board-xc7z045-ap-soc) page.
 
-## 2\. Connect TTL-to-Converters to the J58 pins on ZC706 board.
+## 2\. Connect TTL-to-USB Converters to the J58 pins on ZC706 board.
 
 Images below present the J58 connector connections to both converters, only the 1st converter is necessary to interact with CheriBSD (2nd one can be used to transfer files to/from it). Both images have the same orientation.
 
@@ -106,8 +106,6 @@ python3 -m serial.tools.miniterm /dev/ttyUSB_second_uart 115200 --eol LF
 ```
 
 ## 4\. Clone this repository.  
-
-It has over 2GB due to large Vivado project files.
 
 ```bash
 # with ssh
@@ -252,7 +250,17 @@ Clone [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) and:
 ```
 
 ## bit and ltx
-[files/vivado_2022_1_project](./files/vivado_2022_1_project/) directory contains the whole vivado project and associated files/sources needed to recreate bit/ltx files. It most likely requires 2022.1 version of Vivado. It will surely output errors after opening the project due to invalid sources paths, sorry about that but I didn't figure out how to conveniently share Vivado projects including block designs.
+* Create a new Vivado 2022.1 project, with ZC706 board selected as the target. 
+* Add all verilog source files from [files/vivado_2022_1_project/sources](./files/vivado_2022_1_project/sources/), and add the `p2_ddr3.tcl` constraints file from [files/vivado_2022_1_project](./files/vivado_2022_1_project/) too. 
+* Enter project settings (under the "Project Manager" tab), select `IP->Repositories`, and include the [files/vivado_2022_1_project/jtag](./files/vivado_2022_1_project/jtag/) directory. This will allow to use the `xilinx_jtag_0` IP block and allow OpenOCD to communicate through the USB cable. 
+* In the TCL console type:
+```bash
+source <path_to_this_repo>/files/vivado_2022_1_project/p2_ddr3.tcl
+```
+At this point the design should be recreated. In the design, double click on the Block Memory Generator, select "Other Options" tab, browse coe file and select `bootrom.coe` file from [files/vivado_2022_1_project](./files/vivado_2022_1_project/).
+
+Now "Generate Bitstream" button can be pressed. If everything goes right, the `.bit` and `.ltx` files should be stored in the `<vivado_project>/project.runs/impl_1/` directory. In case of any issues please feel free to create an issue in this repo.
+
 
 ## bootrom.coe
 Clone [my fork of BESSPIN-GFE](https://github.com/michalmonday/BESSPIN-GFE) repository, switch to "ZC706" branch, recompile bootrom.coe file (which can be then used in Vivado block design to set contents of bootrom block at 0x70000000 address)
