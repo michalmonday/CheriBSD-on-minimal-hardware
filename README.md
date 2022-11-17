@@ -279,5 +279,12 @@ make
 The ZC706 branch has a modified [devicetree.dts](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/devicetree.dts), which has removed Ethernet, DMA, and introduced 2nd UART. Additionally, it sets 50MHz clock and disables PCI in the [Makefile](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/Makefile)
 
 
+# Credits
+* [jtag](./files/vivado_2022_1_project/jtag) directory is directly copied from the [BESSPIN-GFE](https://github.com/GaloisInc/BESSPIN-GFE/tree/master/jtag) repository. 
+* Files from the [sources](./files/vivado_2022_1_project/sources/) directory were obtained from the [CTSRD-CHERI:Flute](https://github.com/CTSRD-CHERI/Flute) repository, by following instructions in "src_SSITH_P2" and copying files from "Verilog_RTL/" and "xilinx_ip/hdl/" directories located there.
+
+Please refer to the original repositories for more information about the files or licenses they were shared with.
+
+
 # Additional notes
 VCU118 board setup involves running the [vcu118-run.py](https://github.com/michalmonday/cheribuild/blob/master/vcu118-run.py) script. Setup steps from this guide are mimicking actions of that script. Possibly, it would be better to modify that script, provide `--board` argument and use it instead of manually invoking Vivado, OpenOCD, GDB and serial terminals.
