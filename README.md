@@ -62,7 +62,7 @@ SW11 - Boot mode select switch (JTAG mode selected):
 SW4 - PL JTAG select switch (Digilent USB-to-JTAG interface selected):  
 <img src="./images/sw4.png" width=300/>  
 
-This exact setting may not be necessary for this guide, but we provide it for reference and convenience. More information about these switches is available on [ZC706 User Guide](https://www.xilinx.com/support/documentation/boards_and_kits/zc706/ug1165-zc706-eval-board.pdf) page.
+This exact setting may not be necessary for this guide, but we provide it for reference and convenience. More information about these switches is available on [ZC706 User Guide](https://docs.xilinx.com/v/u/en-US/ug954-zc706-eval-board-xc7z045-ap-soc) page.
 
 ## 2\. Connect TTL-to-Converters to the J58 pins on ZC706 board.
 
@@ -73,12 +73,14 @@ Images below present the J58 connector connections to both converters, only the 
 <img src="./images/j58-fritzing.png" heihgt=150/>
 
 > \# Right side (1st UART, command line interaction with CheriBSD)  
-> PMOD1_6 -> RXD of FT232RL converter  
-> PMOD1_7 -> TXD of FT232RL 
+> PMOD1_6 (upper pin) <-> RXD of FT232RL converter  
+> PMOD1_7 (lower pin) <-> TXD of FT232RL 
 >  
 > \# Left side (2nd UART, transferring files to/from CheriBSD)   
-> PMOD1_2 -> RXD of FT232RL converter  
-> PMOD1_3 -> TXD of FT232RL converter  
+> PMOD1_2 (upper pin) <-> RXD of FT232RL converter  
+> PMOD1_3 (lower pin) <-> TXD of FT232RL converter  
+
+`Figure 1-29: User GPIO Headers` from [ZC706 User Guide](https://docs.xilinx.com/v/u/en-US/ug954-zc706-eval-board-xc7z045-ap-soc) illustrates the J58 connector and its pin names.
 
 ## 3\. Connect the TTL-to-USB converters to the host computer.
 
@@ -88,7 +90,7 @@ To find out the port, we can use:
 python3 -m serial.tools.list_ports -v
 ```
 
-Then we can use any serial communication tool like **screen**:  
+Then we can use any serial communication tool to open 2 serial ports in 2 separate terminals/tabs. A tool like **screen** can be used:  
 ```bash 
 screen /dev/ttyUSB_first_uart 115200
 screen /dev/ttyUSB_second_uart 115200
@@ -199,7 +201,7 @@ After that we should see a lot of incoming messages from the CheriBSD in the 1st
 The default BAUD rate used by the 2nd UART is 9600 (despite setting it to 115200 in device tree used to generate bootrom used inside the p2.bit). It is slow and should be changed with the following commands on CheriBSD:
 ```bash
 stty -f /dev/cuau1.init 115200
-stty -f /dev/ttyu1.init 115200 # not sure if this one is needed (not sure what is the difference between cuau and ttyu)
+stty -f /dev/ttyu1.init 115200 # not sure if this one is needed (not sure what is the difference between cuau and ttyu but both became available after including 2nd UART in device tree)
 ```
 
 ### Sending files to CheriBSD
@@ -208,7 +210,7 @@ The following commands will send 2 files and 2 directories to CheriBSD.
 On CheriBSD:
 ```bash
 # start receiving
-cat /dev/cuau1 > archive.tar.gz 
+cat /dev/cuau1 > archive.tar.gz.txt
 ```
 
 On host computer:
@@ -222,7 +224,7 @@ uuencode archive.tar.gz archive.tar.gz > /dev/ttyUSB_second_uart
 
 After the command above finishes, we can go back to CheriBSD and:
 ```bash
-# Ctrl+c (to end the previous "cat")
+# Ctrl+c (to end the previous "cat" which wrote into archive.tar.gz.txt)
 # decode received archive
 uudecode -o archive.tar.gz archive.tar.gz.txt
 
