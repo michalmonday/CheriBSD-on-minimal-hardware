@@ -285,7 +285,9 @@ The ZC706 branch has a modified [devicetree.dts](https://github.com/michalmonday
 ## P2 CHERI-Flute Verilog source files
 * Clone [CTSRD-CHERI:Flute](https://github.com/CTSRD-CHERI/Flute) and replace the content of the [src_SSITH_P2/src_BSV/JtagTap.bsv](https://github.com/CTSRD-CHERI/Flute/blob/CHERI/src_SSITH_P2/src_BSV/JtagTap.bsv) file with same file from [this fork](https://github.com/michalmonday/Flute/blob/continuous_monitoring/src_SSITH_P2/src_BSV/JtagTap.bsv) (which introduces XILINX_XC7Z045 contidions/settings). 
 * In [src_SSITH_P2/src_BSV/Makefile](https://github.com/CTSRD-CHERI/Flute/blob/CHERI/src_SSITH_P2/Makefile) replace `-D XILINX_XCVU9P` with `-D XILINX_XC7Z045`. Without completing this step and the one above, OpenOCD won't be able to communicate with ZC706 board.
-* Run `make compile` from the src_SSITH_P2 directory.
+* Install [bsc](https://github.com/B-Lang-org/bsc) compiler.
+* Install libraries for bsc compiler from [bsc-contrib](https://github.com/B-Lang-org/bsc-contrib) as described in bsc-contrib README.md file. Make sure to use PREFIX that will lead to bsc compiler. In my case, after installing libraries, the `bsc/bsc-2022.01-ubuntu-18.04/lib/Libraries/` directory contains all folders from [bsc-contrib/Libraries/](https://github.com/B-Lang-org/bsc-contrib/tree/main/Libraries) (e.g. Bus, COBS, FPGA).
+* Navigate to **src_SSITH_P2/** and run `make compile` to generate Verilog source files.
 
 Verilog source files should be located in the newly created **Verilog_RTL** directory. These files + files from **src_SSITH_P2/xilinx/hdl/** directory are the complete source code for the Flute processor including the P2 wrapper. As instructed in the README.md of **src_SSITH_P2**, the sources from Verilog_RTL can be copied into xilinx/hdl. Then the xilinx directory could be added as IP repository in Vivado project settings. Alternatively, all the sources can be added into a project directly (not as an IP) and included in block design by right-clicking, selecting "Add Module" and choosing `mkP2_Core`, that was done in our design.
 
