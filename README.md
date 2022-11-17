@@ -1,12 +1,13 @@
 # CheriBSD-on-minimal-hardware
 Files and instructions for running CheriBSD using Flute processor implemented on ZC706 board. 
+- [CheriBSD-on-minimal-hardware](#cheribsd-on-minimal-hardware)
 - [Purpose](#purpose)
 - [Background and characteristics of the minimal hardware design](#background-and-characteristics-of-the-minimal-hardware-design)
 - [Block design](#block-design)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
   - [1\. ZC706 switches setting.](#1-zc706-switches-setting)
-  - [2\. Connect TTL-to-USB converters to the J58 pins on ZC706 board.](#2-connect-ttl-to-usb-converters-to-the-j58-pins-on-zc706-board)
+  - [2\. Connect TTL-to-USB Converters to the J58 pins on ZC706 board.](#2-connect-ttl-to-usb-converters-to-the-j58-pins-on-zc706-board)
   - [3\. Connect the TTL-to-USB converters to the host computer.](#3-connect-the-ttl-to-usb-converters-to-the-host-computer)
   - [4\. Clone this repository.](#4-clone-this-repository)
   - [5\. Program the ZC706 board.](#5-program-the-zc706-board)
@@ -19,6 +20,8 @@ Files and instructions for running CheriBSD using Flute processor implemented on
   - [bbl and kernels](#bbl-and-kernels)
   - [bit and ltx](#bit-and-ltx)
   - [bootrom.coe](#bootromcoe)
+  - [P2 CHERI-Flute Verilog source files](#p2-cheri-flute-verilog-source-files)
+- [Credits](#credits)
 - [Additional notes](#additional-notes)
 
 
@@ -277,6 +280,14 @@ make
 ```
 
 The ZC706 branch has a modified [devicetree.dts](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/devicetree.dts), which has removed Ethernet, DMA, and introduced 2nd UART. Additionally, it sets 50MHz clock and disables PCI in the [Makefile](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/Makefile)
+
+
+## P2 CHERI-Flute Verilog source files
+* Clone [CTSRD-CHERI:Flute](https://github.com/CTSRD-CHERI/Flute) and replace the content of the [src_SSITH_P2/src_BSV/JtagTap.bsv](https://github.com/CTSRD-CHERI/Flute/blob/CHERI/src_SSITH_P2/src_BSV/JtagTap.bsv) file with same file from [this fork](https://github.com/michalmonday/Flute/blob/continuous_monitoring/src_SSITH_P2/src_BSV/JtagTap.bsv) (which introduces XILINX_XC7Z045 contidions/settings). 
+* In [src_SSITH_P2/src_BSV/Makefile](https://github.com/CTSRD-CHERI/Flute/blob/CHERI/src_SSITH_P2/Makefile) replace `-D XILINX_XCVU9P` with `-D XILINX_XC7Z045`. Without completing this step and the one above, OpenOCD won't be able to communicate with ZC706 board.
+* Run `make compile` from the src_SSITH_P2 directory.
+
+Verilog source files should be located in the newly created **Verilog_RTL** directory. These files + files from **src_SSITH_P2/xilinx/hdl/** directory are the complete source code for the Flute processor including the P2 wrapper. As instructed in the README.md of **src_SSITH_P2**, the sources from Verilog_RTL can be copied into xilinx/hdl. Then the xilinx directory could be added as IP repository in Vivado project settings. Alternatively, all the sources can be added into a project directly (not as an IP) and included in block design by right-clicking, selecting "Add Module" and choosing `mkP2_Core`, that was done in our design.
 
 
 # Credits
