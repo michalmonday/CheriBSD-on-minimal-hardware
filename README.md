@@ -257,9 +257,14 @@ Clone [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) and:
 ```bash
 source <path_to_this_repo>/files/vivado_2022_1_project/p2_ddr3.tcl
 ```
-At this point the design should be recreated. In the design, double click on the Block Memory Generator, select "Other Options" tab, browse coe file and select `bootrom.coe` file from [files/vivado_2022_1_project](./files/vivado_2022_1_project/).
+At this point the design should be recreated. 
 
-Now "Generate Bitstream" button can be pressed. If everything goes right, the `.bit` and `.ltx` files should be stored in the `<vivado_project>/project.runs/impl_1/` directory. In case of any issues please feel free to create an issue in this repo.
+* In the design, double click on the Block Memory Generator, select "Other Options" tab, browse coe file and select `bootrom.coe` file from [files/vivado_2022_1_project](./files/vivado_2022_1_project/).
+* In the source window/tab right-click on the p2_ddr3.bd block diagram entry and select "Create HDL Wrapper" which should create a new file `p2_ddr3_wrapper.v`.
+* Right click `p2_ddr3_wrapper.v` and select "Set as Top".
+* Click "Generate Bitstream" button.
+
+If everything goes right, the `.bit` and `.ltx` files should be stored in the `<vivado_project>/project.runs/impl_1/` directory. In case of any issues please feel free to create an issue in this repo.
 
 
 ## bootrom.coe
