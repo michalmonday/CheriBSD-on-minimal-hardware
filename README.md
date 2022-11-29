@@ -65,7 +65,7 @@ See high resulution block design [PDF here](./images/p2_ddr3.pdf). Constraints t
 * 1st TTL-to-USB converter* (needed to interact with CheriBSD command line)
 * 2nd TTL-to-USB converter* (needed for transferring files to/from CheriBSD)
 * wires (to connect TTL-to-USB converters to ZC706 board)
-* we used Ubuntu 18.04.1
+* we used Ubuntu 18.04.1 virtual machine as the host computer (to which ZC706 board was connected)
 
 \* (e.g. [FT232RL](https://www.sparkfun.com/products/9873), or Arduino Leonardo/Pro-Micro using [serial.ino](./tools/serial.ino) script)
 
