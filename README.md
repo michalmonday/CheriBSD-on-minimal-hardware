@@ -1,19 +1,19 @@
 # CheriBSD-on-minimal-hardware
 Files and instructions for running CheriBSD using Flute processor implemented on ZC706 board. 
-- [CheriBSD-on-minimal-hardware](#cheribsd-on-minimal-hardware)
 - [Purpose](#purpose)
 - [Background and characteristics of the minimal hardware design](#background-and-characteristics-of-the-minimal-hardware-design)
+- [Summary of adjustments (compared to using VCU118 board)](#summary-of-adjustments-compared-to-using-vcu118-board)
 - [Block design](#block-design)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-  - [1\. ZC706 switches setting.](#1-zc706-switches-setting)
-  - [2\. Connect TTL-to-USB Converters to the J58 pins on ZC706 board.](#2-connect-ttl-to-usb-converters-to-the-j58-pins-on-zc706-board)
-  - [3\. Connect the TTL-to-USB converters to the host computer.](#3-connect-the-ttl-to-usb-converters-to-the-host-computer)
-  - [4\. Clone this repository.](#4-clone-this-repository)
-  - [5\. Program the ZC706 board.](#5-program-the-zc706-board)
-  - [6\. Install and run OpenOCD (possibly requires GFE-specific version).](#6-install-and-run-openocd-possibly-requires-gfe-specific-version)
-  - [7\. Run GDB in a separate terminal.](#7-run-gdb-in-a-separate-terminal)
-  - [8\. Transfer files to/from CheriBSD through 2nd UART.](#8-transfer-files-tofrom-cheribsd-through-2nd-uart)
+  - [1. ZC706 switches setting.](#1-zc706-switches-setting)
+  - [2. Connect TTL-to-USB Converters to the J58 pins on ZC706 board.](#2-connect-ttl-to-usb-converters-to-the-j58-pins-on-zc706-board)
+  - [3. Connect the TTL-to-USB converters to the host computer.](#3-connect-the-ttl-to-usb-converters-to-the-host-computer)
+  - [4. Clone this repository.](#4-clone-this-repository)
+  - [5. Program the ZC706 board.](#5-program-the-zc706-board)
+  - [6. Install and run OpenOCD (possibly requires GFE-specific version).](#6-install-and-run-openocd-possibly-requires-gfe-specific-version)
+  - [7. Run GDB in a separate terminal.](#7-run-gdb-in-a-separate-terminal)
+  - [8. Transfer files to/from CheriBSD through 2nd UART.](#8-transfer-files-tofrom-cheribsd-through-2nd-uart)
     - [Setting BAUD rate](#setting-baud-rate)
     - [Sending files to CheriBSD](#sending-files-to-cheribsd)
 - [Recreating files used in this guide](#recreating-files-used-in-this-guide)
@@ -37,6 +37,21 @@ The Vivado project from the [BESSPIN-GFE](https://github.com/CTSRD-CHERI/BESSPIN
 
 Additionally, in comparison with the BESSPIN-GFE design, our design lacks SPI blocks, IIC, DMA, and we use DDR3 controller instead of DDR4. We are not 100% sure the system is fully stable because of these changes, however it boots correctly, runs a "hello world" program and successfully stops stack buffer overflow program from [cheri-exercises](https://github.com/CTSRD-CHERI/cheri-exercises/tree/master/src/exercises/buffer-overflow-stack) with "In-address space security exception" message.
 
+# Summary of adjustments (compared to using VCU118 board)
+Changes were made to the following:  
+* JTAG module in the processor core (added `XILINX_XC7Z045` setting in [JtagTap.bsv](https://github.com/michalmonday/Flute/blob/continuous_monitoring/src_SSITH_P2/src_BSV/JtagTap.bsv))
+* bootrom program containing [device tree](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/devicetree.dts) (removed unused modules, added 2nd UART and recompiled it, with `NO_PCI?=1` and `CPU_SPEED?=50000000` in the [Makefile](https://github.com/michalmonday/BESSPIN-GFE/blob/ZC706/bootrom/Makefile))
+* OpenOCD configuration [file](./scripts/openocd_zc706.cfg) (changed values of irlen, expected-id, dtmcs, dmi)
+* Vivado programming [script](./scripts/vivado_script_zc706.txt) (changed `xcvu9p_0` into `xc7z045_1`)
+* We used a minimal hardware design instead of the one from BESSPIN-GFE 
+
+Please refer to the [Recreating files used in this guide](#recreating-files-used-in-this-guide) section for more details.
+
+Programming VCU118 board involves running `vcu118-run.py` from [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) repository. That script takes care of running Vivado, OpenOCD, GBD and serial communication. In this guide, all these programs are invoked manually, attempting to recreate the functionality of `vcu118-run.py` script but with slight adjustments. 
+
+**Side note**: 
+Possibly, it would be better to modify the `vcu118-run.py` script, provide `--board` argument (specifying board type) and use it instead of manually invoking everything.
+
 # Block design
 
 ![image missing](./images/p2_ddr.png)  
@@ -50,6 +65,7 @@ See high resulution block design [PDF here](./images/p2_ddr3.pdf). Constraints t
 * 1st TTL-to-USB converter* (needed to interact with CheriBSD command line)
 * 2nd TTL-to-USB converter* (needed for transferring files to/from CheriBSD)
 * wires (to connect TTL-to-USB converters to ZC706 board)
+* we used Ubuntu 18.04.1
 
 \* (e.g. [FT232RL](https://www.sparkfun.com/products/9873), or Arduino Leonardo/Pro-Micro using [serial.ino](./tools/serial.ino) script)
 
@@ -297,7 +313,3 @@ Verilog source files should be located in the newly created **Verilog_RTL** dire
 * Files from the [sources](./files/vivado_2022_1_project/sources/) directory were obtained from the [CTSRD-CHERI:Flute](https://github.com/CTSRD-CHERI/Flute) repository, by following instructions in "src_SSITH_P2" and copying files from "Verilog_RTL/" and "xilinx_ip/hdl/" directories located there.
 
 Please refer to the original repositories for more information about the files or licenses they were shared with.
-
-
-# Additional notes
-VCU118 board setup involves running the [vcu118-run.py](https://github.com/michalmonday/cheribuild/blob/master/vcu118-run.py) script. Setup steps from this guide are mimicking actions of that script. Possibly, it would be better to modify that script, provide `--board` argument and use it instead of manually invoking Vivado, OpenOCD, GDB and serial terminals.
