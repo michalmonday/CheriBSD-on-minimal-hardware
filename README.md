@@ -1,5 +1,6 @@
 # CheriBSD-on-minimal-hardware
 Files and instructions for running CheriBSD using Flute processor implemented on ZC706 board. 
+- [Preface](#preface)
 - [Purpose](#purpose)
 - [Background and characteristics of the minimal hardware design](#background-and-characteristics-of-the-minimal-hardware-design)
 - [Summary of adjustments (compared to using VCU118 board)](#summary-of-adjustments-compared-to-using-vcu118-board)
@@ -22,8 +23,9 @@ Files and instructions for running CheriBSD using Flute processor implemented on
   - [bootrom.coe](#bootromcoe)
   - [P2 CHERI-Flute Verilog source files](#p2-cheri-flute-verilog-source-files)
 - [Credits](#credits)
-- [Additional notes](#additional-notes)
 
+# Preface
+CheriBSD is an operating system based on FreeBSD, it contains the Capability Hardware Enhanced RISC Instructions (CHERI) extension. CHERI is an extension of instruction set architecture (ISA) that protects against memory corruption vulnerabilities. Vulnerabilities that are prevalent due to lack of security considerations while designing programming languages like C/C++ and conventional processor architectures. CHERI project began in 2010 at the Univesity of Cambridge.
 
 # Purpose
 It is relatively straightforward to run CheriBSD on an open-source processor (e.g. Flute, Toooba) when in possession of VCU118 board (as explained on [cheripedia](https://github.com/CTSRD-CHERI/cheripedia/wiki/HOWTO%3A-Run-CheriBSD-and-Toooba-on-VCU118) page). However, VCU118 board is expensive and it is hard to find any information about adapting the hardware design and scripts to a different board.
