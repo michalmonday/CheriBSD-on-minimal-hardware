@@ -154,8 +154,8 @@ module mkJtagTap(CLK,
   wire r_drmask$EN;
 
   // register r_ir
-  reg [5 : 0] r_ir;
-  wire [5 : 0] r_ir$D_IN;
+  reg [4 : 0] r_ir;
+  wire [4 : 0] r_ir$D_IN;
   wire r_ir$EN;
 
   // register r_state
@@ -240,22 +240,16 @@ module mkJtagTap(CLK,
        WILL_FIRE_jtag_tms;
 
   // remaining internal signals
-  reg [39 : 0] CASE_newir199_0_1_1_2147483648_0x3_54975581388_ETC__q1,
+  reg [39 : 0] CASE_newir199_0_1_1_2147483648_0x11_2147483648_ETC__q1,
 	       v__h2040;
-  reg [5 : 0] newir__h3199;
+  reg [4 : 0] newir__h3199;
   reg [3 : 0] CASE_r_state_0_1_1_1_2_3_3_4_4_4_5_6_6_6_7_4_8_ETC__q3,
 	      CASE_r_state_0_r_state_1_2_2_9_3_5_4_5_5_8_6_7_ETC__q2;
-  wire [39 : 0] IF_r_dmistat_busy_port0__read__38_OR_NOT_r_dmi_ETC___d141,
-		v__h2138,
-		v__h2515,
-		x__h2284,
-		x__h2363,
-		x__h2566,
-		y__h2567;
-  wire [5 : 0] v__h3069, x__h3114, y__h3115;
-  wire r_state_EQ_8_0_AND_r_ir_EQ_0x22_0_AND_r_dr_6_B_ETC___d55,
-       r_state_EQ_8_0_AND_r_ir_EQ_0x3_2_AND_NOT_r_dmi_ETC___d66,
-       r_state_EQ_8_0_AND_r_ir_EQ_0x3_2_AND_NOT_r_dmi_ETC___d70;
+  wire [39 : 0] v__h2138, v__h2515, x__h2363, x__h2566, y__h2567;
+  wire [4 : 0] v__h3069, x__h3114, y__h3115;
+  wire r_state_EQ_8_7_AND_r_ir_EQ_0x11_0_AND_r_dr_3_B_ETC___d52,
+       r_state_EQ_8_7_AND_r_ir_EQ_1_8_AND_NOT_r_dmi_3_ETC___d63,
+       r_state_EQ_8_7_AND_r_ir_EQ_1_8_AND_NOT_r_dmi_3_ETC___d67;
 
   // oscillator and gates for output clock CLK_jtag_tclk_out
   assign CLK_jtag_tclk_out = tck_clock$OUT ;
@@ -376,7 +370,7 @@ module mkJtagTap(CLK,
 
   // rule RL_dmi_start
   assign CAN_FIRE_RL_dmi_start =
-	     r_state_EQ_8_0_AND_r_ir_EQ_0x3_2_AND_NOT_r_dmi_ETC___d70 &&
+	     r_state_EQ_8_7_AND_r_ir_EQ_1_8_AND_NOT_r_dmi_3_ETC___d67 &&
 	     f_dmi_req$sFULL_N &&
 	     f_dmi_busy$FULL_N &&
 	     w_dmi_req$wget[1:0] != 2'd0 ;
@@ -401,7 +395,7 @@ module mkJtagTap(CLK,
 
   // rule RL_dmi_reset
   assign CAN_FIRE_RL_dmi_reset =
-	     r_state_EQ_8_0_AND_r_ir_EQ_0x22_0_AND_r_dr_6_B_ETC___d55 &&
+	     r_state_EQ_8_7_AND_r_ir_EQ_0x11_0_AND_r_dr_3_B_ETC___d52 &&
 	     (!r_dr[17] || f_dmi_req$sCLR_RDY && f_dmi_rsp$dCLR_RDY) ;
   assign WILL_FIRE_RL_dmi_reset = CAN_FIRE_RL_dmi_reset ;
 
@@ -420,7 +414,7 @@ module mkJtagTap(CLK,
   assign r_tdo$port1__read =
 	     r_tdo$EN_port0__write ? r_tdo$port0__write_1 : r_tdo ;
   assign r_dmistat_busy$port1__read =
-	     r_state_EQ_8_0_AND_r_ir_EQ_0x3_2_AND_NOT_r_dmi_ETC___d66 ||
+	     r_state_EQ_8_7_AND_r_ir_EQ_1_8_AND_NOT_r_dmi_3_ETC___d63 ||
 	     r_dmistat_busy ;
   assign r_dmistat_busy$port2__read =
 	     !CAN_FIRE_RL_dmi_reset && r_dmistat_busy$port1__read ;
@@ -450,7 +444,7 @@ module mkJtagTap(CLK,
   // register r_drmask
   assign r_drmask$D_IN =
 	     (r_state == 4'd3) ?
-	       CASE_newir199_0_1_1_2147483648_0x3_54975581388_ETC__q1 :
+	       CASE_newir199_0_1_1_2147483648_0x11_2147483648_ETC__q1 :
 	       r_drmask ;
   assign r_drmask$EN = 1'd1 ;
 
@@ -495,70 +489,51 @@ module mkJtagTap(CLK,
   assign tck_clock$IN = w_tck_crossed$DOUT ;
 
   // remaining internal signals
-  assign IF_r_dmistat_busy_port0__read__38_OR_NOT_r_dmi_ETC___d141 =
-	     (r_dmistat_busy ||
-	      r_dmi[1:0] != 2'd2 && r_dmi[1:0] != 2'd3 &&
-	      f_dmi_busy$EMPTY_N) ?
-	       x__h2284 :
-	       r_dmi ;
-  assign r_state_EQ_8_0_AND_r_ir_EQ_0x22_0_AND_r_dr_6_B_ETC___d55 =
-	     r_state == 4'd8 && r_ir == 6'h22 && (r_dr[17] || r_dr[16]) ;
-  assign r_state_EQ_8_0_AND_r_ir_EQ_0x3_2_AND_NOT_r_dmi_ETC___d66 =
-	     r_state == 4'd8 && r_ir == 6'h03 && r_dmi[1:0] != 2'd2 &&
+  assign r_state_EQ_8_7_AND_r_ir_EQ_0x11_0_AND_r_dr_3_B_ETC___d52 =
+	     r_state == 4'd8 && r_ir == 5'h11 && (r_dr[17] || r_dr[16]) ;
+  assign r_state_EQ_8_7_AND_r_ir_EQ_1_8_AND_NOT_r_dmi_3_ETC___d63 =
+	     r_state == 4'd8 && r_ir == 5'd1 && r_dmi[1:0] != 2'd2 &&
 	     r_dmi[1:0] != 2'd3 &&
 	     f_dmi_busy$EMPTY_N ;
-  assign r_state_EQ_8_0_AND_r_ir_EQ_0x3_2_AND_NOT_r_dmi_ETC___d70 =
-	     r_state == 4'd8 && r_ir == 6'h03 && r_dmi[1:0] != 2'd2 &&
+  assign r_state_EQ_8_7_AND_r_ir_EQ_1_8_AND_NOT_r_dmi_3_ETC___d67 =
+	     r_state == 4'd8 && r_ir == 5'd1 && r_dmi[1:0] != 2'd2 &&
 	     r_dmi[1:0] != 2'd3 &&
 	     !f_dmi_busy$EMPTY_N ;
-  assign v__h2138 = { 34'd3932160, r_ir } ;
+  assign v__h2138 = { 35'd7864320, r_ir } ;
   assign v__h2515 = x__h2566 | y__h2567 ;
   assign v__h3069 = x__h3114 | y__h3115 ;
-  assign x__h2284 =
-	     { 6'bxxxxxx /* unspecified value */ ,
-	       32'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /* unspecified value */ ,
-	       2'd3 } ;
   assign x__h2363 = { 28'd0, r_dmi[1:0], 10'd97 } ;
   assign x__h2566 = { 1'd0, r_dr[39:1] } ;
-  assign x__h3114 = { 1'd0, r_ir[5:1] } ;
+  assign x__h3114 = { 1'd0, r_ir[4:1] } ;
   assign y__h2567 = jtag_tdi ? r_drmask : 40'd0 ;
-  assign y__h3115 = jtag_tdi ? 6'd32 : 6'd0 ;
+  assign y__h3115 = jtag_tdi ? 5'd16 : 5'd0 ;
   always@(r_state or r_ir or v__h3069)
   begin
     case (r_state)
-      4'd0: newir__h3199 = 6'd1;
+      4'd0: newir__h3199 = 5'd1;
       4'd3, 4'd4, 4'd8: newir__h3199 = r_ir;
       4'd11: newir__h3199 = v__h3069;
       default: newir__h3199 = r_ir;
     endcase
   end
-  always@(r_ir or
-	  v__h2138 or
-	  IF_r_dmistat_busy_port0__read__38_OR_NOT_r_dmi_ETC___d141 or
-	  x__h2363)
+  always@(r_ir or v__h2138 or x__h2363)
   begin
     case (r_ir)
-      6'd0, 6'h12, 6'h13, 6'h14, 6'h15, 6'h16, 6'h17, 6'd63: v__h2040 = 40'd0;
-      6'd1: v__h2040 = 40'd4093;
-      6'h03:
-	  v__h2040 =
-	      IF_r_dmistat_busy_port0__read__38_OR_NOT_r_dmi_ETC___d141;
-      6'h22: v__h2040 = x__h2363;
+      5'd0, 5'h12, 5'h13, 5'h14, 5'h15, 5'h16, 5'h17, 5'd31: v__h2040 = 40'd0;
+      5'd1: v__h2040 = 40'd4093;
+      5'h11: v__h2040 = x__h2363;
       default: v__h2040 = v__h2138;
     endcase
   end
   always@(newir__h3199)
   begin
     case (newir__h3199)
-      6'd0, 6'h12, 6'h13, 6'h14, 6'h15, 6'h16, 6'h17, 6'd63:
-	  CASE_newir199_0_1_1_2147483648_0x3_54975581388_ETC__q1 = 40'd1;
-      6'd1, 6'h22:
-	  CASE_newir199_0_1_1_2147483648_0x3_54975581388_ETC__q1 =
+      5'd0, 5'h12, 5'h13, 5'h14, 5'h15, 5'h16, 5'h17, 5'd31:
+	  CASE_newir199_0_1_1_2147483648_0x11_2147483648_ETC__q1 = 40'd1;
+      5'd1, 5'h11:
+	  CASE_newir199_0_1_1_2147483648_0x11_2147483648_ETC__q1 =
 	      40'h0080000000;
-      6'h03:
-	  CASE_newir199_0_1_1_2147483648_0x3_54975581388_ETC__q1 =
-	      40'h8000000000;
-      default: CASE_newir199_0_1_1_2147483648_0x3_54975581388_ETC__q1 =
+      default: CASE_newir199_0_1_1_2147483648_0x11_2147483648_ETC__q1 =
 		   40'h0100000000;
     endcase
   end
@@ -632,7 +607,7 @@ module mkJtagTap(CLK,
     r_dmistat_busy = 1'h0;
     r_dr = 40'hAAAAAAAAAA;
     r_drmask = 40'hAAAAAAAAAA;
-    r_ir = 6'h2A;
+    r_ir = 5'h0A;
     r_state = 4'hA;
     r_tdo = 1'h0;
   end
@@ -646,15 +621,14 @@ module mkJtagTap(CLK,
   begin
     #0;
     if (rst_tck$OUT_RST != `BSV_RESET_VALUE)
-      if (r_state == 4'd3 && r_ir != 6'd0 && r_ir != 6'h12 && r_ir != 6'h13 &&
-	  r_ir != 6'h14 &&
-	  r_ir != 6'h15 &&
-	  r_ir != 6'h16 &&
-	  r_ir != 6'h17 &&
-	  r_ir != 6'd63 &&
-	  r_ir != 6'd1 &&
-	  r_ir != 6'h22 &&
-	  r_ir != 6'h03)
+      if (r_state == 4'd3 && r_ir != 5'd0 && r_ir != 5'h12 && r_ir != 5'h13 &&
+	  r_ir != 5'h14 &&
+	  r_ir != 5'h15 &&
+	  r_ir != 5'h16 &&
+	  r_ir != 5'h17 &&
+	  r_ir != 5'd31 &&
+	  r_ir != 5'd1 &&
+	  r_ir != 5'h11)
 	$display("WARNING: unsupported IR: 'h%x\n", r_ir);
   end
   // synopsys translate_on
