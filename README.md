@@ -267,7 +267,7 @@ Clone [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) and:
 
 ```bash
 # kernel files will be stored in ~/cheri/output/
-./cheribuild.py cheribsd-mfs-root-kernel-riscv64-purecap --cheribsd-mfs-root-kernel/build-fpga-kernels --cheribsd-mfs-root-kernel/build-bench-kernels -d
+./cheribuild.py cheribsd-mfs-root-kernel-riscv64-purecap --cheribsd-mfs-root-kernel-riscv64-purecap/build-fpga-kernels --cheribsd-mfs-root-kernel-riscv64-purecap/build-bench-kernels -d
 ```
 
 ## bit and ltx
